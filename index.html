@@ -1,8 +1,156 @@
 <!DOCTYPE html>
 <html>
-   <head>
-   </head>
-   <body>
-      <!-- Write your HTML in this file! -->
-   </body>
-</html>
+<head>
+   <link rel="stylesheet" type="text/css" href="styles.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+
+<button class="tablink" onclick="openPage('Aboutme', this, 'red')"id="defaultOpen">About Me</button>
+<button class="tablink" onclick="openPage('Myfamily', this, 'green')" >My Family</button>
+<!-- <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('Favorites', this, 'orange')">My Favorites</button> -->
+<main>
+<div id="Aboutme" class="tabcontent">
+  <h3>&cent; Samantha.</h3>
+
+  <p id="testP" class="funParagraph">Hi! My name is Sam. I am a proud momma of 4 kiddos and the owner of a 
+    fashion boutique called Zuchinni Threads. It's named after my love for Zuchinni and in honor of my 
+  mother, Zinnia who loved fashion as well. I don't know how to sew but I sure know how to shop so I find our
+beautiful clothing from a range of high quality manufacturers. I hand pick collections for every season
+and in every size! We also sell shoes, jewelry, oddities & various home decor items. </p>
+
+
+
+<p>In my early years I worked as a teacher and insurance representative. After having kids I realized I needed
+to find a career path that would support our family's needs better. I am a creative person at heart 
+we took a chance and opened up shop! With the rise of technology I found that online was where we needed
+to be in order to grow our business. Today I am working towards completing my certification as a full stack
+web developer in hopes of learning the ropes and obtaining a career in front end development. Once i'm able
+to improve my craft I plan to start a website for our business! </p>
+<article>
+  <header id="mainHeading"> 
+    <h1>Thank you for learning about me!</h1>
+  </header>
+</article>
+<footer>
+  <p>Author: Samantha Stephens</p>
+  <p><a href="mailto:ssmarie14@yahoo.com">ssmarie14@yahoo.com</a></p>
+</footer>
+</div>
+
+<div id="Myfamily" class="tabcontent">
+  <h3>My Family</h3>
+  <p>The Stephen's Family</p> 
+  <div class="responsive">
+   <div class="gallery">
+     <a target="_blank" href="images/cat.avif">
+       <img src="images/cat.avif" alt="Cinque Terre" width="300" height="200">
+     </a>
+     <div class="desc">Cat</div>
+   </div>
+ </div>
+ 
+ 
+ <div class="responsive">
+   <div class="gallery">
+     <a target="_blank" href="images/couple0.PNG">
+       <img src="images/couple0.PNG" alt="Forest" width="300" height="200">
+     </a>
+     <div class="desc">Sam & Sal</div>
+   </div>
+ </div>
+ 
+ <div class="responsive">
+   <div class="gallery">
+     <a target="_blank" href="images/Lennox.jpg">
+       <img src="images/Lennox.jpg" alt="Northern Lights" width="300" height="200">
+     </a>
+     <div class="desc">Lennox</div>
+   </div>
+ </div>
+ 
+ <div class="responsive">
+   <div class="gallery">
+     <a target="_blank" href="images/Garret.jpg">
+       <img src="images/Garret.jpg" alt="Mountains" width="300" height="200">
+     </a>
+     <div class="desc">Garret</div>
+   </div>
+ </div>
+
+ <div class="responsive">
+   <div class="gallery">
+     <a target="_blank" href="images/uncle Po.jpg">
+       <img src="images/uncle Po.jpg" alt="Mountains" width="300" height="200">
+     </a>
+     <div class="desc">Uncle Po</div>
+   </div>
+ </div>
+
+ <div class="responsive">
+   <div class="gallery">
+     <a target="_blank" href="images/Grandma.jpg">
+       <img src="images/Grandma.jpg" alt="Mountains" width="300" height="200">
+     </a>
+     <div class="desc">Grandma</div>
+   </div>
+ </div>
+
+ <div class="responsive">
+   <div class="gallery">
+     <a target="_blank" href="images/Raplth.PNG">
+       <img src="images/Raplth.PNG" alt="Mountains" width="300" height="200">
+     </a>
+     <div class="desc">Ralph</div>
+   </div>
+ </div>
+ 
+ <div class="clearfix"></div>
+ 
+ <div style="padding:6px;">
+   <p> These are my family members. They are all so unique in their own way and I love them very much.
+    Ralph is my oldest, then Garret & Lennox. My brother Po lives with us too and run's our family store
+    in town. My husband Sal & I work at the store and help around the community wherever we can. On occasion 
+    we head down to open mic night and do family karaoke! Grandma Trudy & our cat Smitten live just down the
+    road! We love hanging out with them on holdays and sunday family dinner nights.
+ 
+</div>
+
+<!-- <div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Enter social media stuff </p>
+</div> -->
+
+
+
+<!-- <div id="Favorites" class="tabcontent">
+  <h3>My Favorite things:</h3>
+  <p>Enter favs</p>
+</div> -->
+</main>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html> 
